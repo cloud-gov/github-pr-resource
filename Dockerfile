@@ -19,4 +19,4 @@ RUN apt install -y --no-install-recommends \
 COPY scripts/askpass.sh /usr/local/bin/askpass.sh
 
 FROM resource
-LABEL MAINTAINER=telia-oss
+LABEL MAINTAINER=cloud-gov
