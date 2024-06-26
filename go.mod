@@ -1,15 +1,25 @@
-module github.com/telia-oss/github-pr-resource
+module github.com/cloud-gov/github-pr-resource
 
 require (
-	github.com/golang/protobuf v1.4.0 // indirect
 	github.com/google/go-github/v28 v28.1.1
-	github.com/maxbrunsfeld/counterfeiter/v6 v6.2.3
-	github.com/shurcooL/githubv4 v0.0.0-20200414012201-bbc966b061dd
-	github.com/shurcooL/graphql v0.0.0-20181231061246-d48a9a75455f // indirect
-	github.com/stretchr/testify v1.3.0
-	golang.org/x/net v0.23.0 // indirect
-	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
-	google.golang.org/appengine v1.6.6 // indirect
+	github.com/maxbrunsfeld/counterfeiter/v6 v6.8.1
+	github.com/shurcooL/githubv4 v0.0.0-20240429030203-be2daab69064
+	github.com/stretchr/testify v1.9.0
+	golang.org/x/oauth2 v0.21.0
 )
 
-go 1.14
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/kr/pretty v0.3.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/shurcooL/graphql v0.0.0-20230722043721-ed46e5a46466 // indirect
+	golang.org/x/crypto v0.24.0 // indirect
+	golang.org/x/mod v0.18.0 // indirect
+	golang.org/x/sync v0.7.0 // indirect
+	golang.org/x/text v0.16.0 // indirect
+	golang.org/x/tools v0.22.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+
+go 1.22

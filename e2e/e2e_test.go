@@ -1,3 +1,4 @@
+//go:build e2e
 // +build e2e
 
 package e2e_test
@@ -14,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	resource "github.com/telia-oss/github-pr-resource"
+	resource "github.com/cloud-gov/github-pr-resource"
 
 	"github.com/google/go-github/v28/github"
 	"github.com/shurcooL/githubv4"
