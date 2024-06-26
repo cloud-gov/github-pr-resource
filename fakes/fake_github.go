@@ -4,8 +4,8 @@ package fakes
 import (
 	"sync"
 
+	resource "github.com/cloud-gov/github-pr-resource"
 	"github.com/shurcooL/githubv4"
-	resource "github.com/telia-oss/github-pr-resource"
 )
 
 type FakeGithub struct {
@@ -112,15 +112,16 @@ func (fake *FakeGithub) DeletePreviousComments(arg1 string) error {
 	fake.deletePreviousCommentsArgsForCall = append(fake.deletePreviousCommentsArgsForCall, struct {
 		arg1 string
 	}{arg1})
+	stub := fake.DeletePreviousCommentsStub
+	fakeReturns := fake.deletePreviousCommentsReturns
 	fake.recordInvocation("DeletePreviousComments", []interface{}{arg1})
 	fake.deletePreviousCommentsMutex.Unlock()
-	if fake.DeletePreviousCommentsStub != nil {
-		return fake.DeletePreviousCommentsStub(arg1)
+	if stub != nil {
+		return stub(arg1)
 	}
 	if specificReturn {
 		return ret.result1
 	}
-	fakeReturns := fake.deletePreviousCommentsReturns
 	return fakeReturns.result1
 }
 
@@ -173,15 +174,16 @@ func (fake *FakeGithub) GetChangedFiles(arg1 string, arg2 string) ([]resource.Ch
 		arg1 string
 		arg2 string
 	}{arg1, arg2})
+	stub := fake.GetChangedFilesStub
+	fakeReturns := fake.getChangedFilesReturns
 	fake.recordInvocation("GetChangedFiles", []interface{}{arg1, arg2})
 	fake.getChangedFilesMutex.Unlock()
-	if fake.GetChangedFilesStub != nil {
-		return fake.GetChangedFilesStub(arg1, arg2)
+	if stub != nil {
+		return stub(arg1, arg2)
 	}
 	if specificReturn {
 		return ret.result1, ret.result2
 	}
-	fakeReturns := fake.getChangedFilesReturns
 	return fakeReturns.result1, fakeReturns.result2
 }
 
@@ -237,15 +239,16 @@ func (fake *FakeGithub) GetPullRequest(arg1 string, arg2 string) (*resource.Pull
 		arg1 string
 		arg2 string
 	}{arg1, arg2})
+	stub := fake.GetPullRequestStub
+	fakeReturns := fake.getPullRequestReturns
 	fake.recordInvocation("GetPullRequest", []interface{}{arg1, arg2})
 	fake.getPullRequestMutex.Unlock()
-	if fake.GetPullRequestStub != nil {
-		return fake.GetPullRequestStub(arg1, arg2)
+	if stub != nil {
+		return stub(arg1, arg2)
 	}
 	if specificReturn {
 		return ret.result1, ret.result2
 	}
-	fakeReturns := fake.getPullRequestReturns
 	return fakeReturns.result1, fakeReturns.result2
 }
 
@@ -300,15 +303,16 @@ func (fake *FakeGithub) ListModifiedFiles(arg1 int) ([]string, error) {
 	fake.listModifiedFilesArgsForCall = append(fake.listModifiedFilesArgsForCall, struct {
 		arg1 int
 	}{arg1})
+	stub := fake.ListModifiedFilesStub
+	fakeReturns := fake.listModifiedFilesReturns
 	fake.recordInvocation("ListModifiedFiles", []interface{}{arg1})
 	fake.listModifiedFilesMutex.Unlock()
-	if fake.ListModifiedFilesStub != nil {
-		return fake.ListModifiedFilesStub(arg1)
+	if stub != nil {
+		return stub(arg1)
 	}
 	if specificReturn {
 		return ret.result1, ret.result2
 	}
-	fakeReturns := fake.listModifiedFilesReturns
 	return fakeReturns.result1, fakeReturns.result2
 }
 
@@ -368,15 +372,16 @@ func (fake *FakeGithub) ListPullRequests(arg1 []githubv4.PullRequestState) ([]*r
 	fake.listPullRequestsArgsForCall = append(fake.listPullRequestsArgsForCall, struct {
 		arg1 []githubv4.PullRequestState
 	}{arg1Copy})
+	stub := fake.ListPullRequestsStub
+	fakeReturns := fake.listPullRequestsReturns
 	fake.recordInvocation("ListPullRequests", []interface{}{arg1Copy})
 	fake.listPullRequestsMutex.Unlock()
-	if fake.ListPullRequestsStub != nil {
-		return fake.ListPullRequestsStub(arg1)
+	if stub != nil {
+		return stub(arg1)
 	}
 	if specificReturn {
 		return ret.result1, ret.result2
 	}
-	fakeReturns := fake.listPullRequestsReturns
 	return fakeReturns.result1, fakeReturns.result2
 }
 
@@ -432,15 +437,16 @@ func (fake *FakeGithub) PostComment(arg1 string, arg2 string) error {
 		arg1 string
 		arg2 string
 	}{arg1, arg2})
+	stub := fake.PostCommentStub
+	fakeReturns := fake.postCommentReturns
 	fake.recordInvocation("PostComment", []interface{}{arg1, arg2})
 	fake.postCommentMutex.Unlock()
-	if fake.PostCommentStub != nil {
-		return fake.PostCommentStub(arg1, arg2)
+	if stub != nil {
+		return stub(arg1, arg2)
 	}
 	if specificReturn {
 		return ret.result1
 	}
-	fakeReturns := fake.postCommentReturns
 	return fakeReturns.result1
 }
 
@@ -497,15 +503,16 @@ func (fake *FakeGithub) UpdateCommitStatus(arg1 string, arg2 string, arg3 string
 		arg5 string
 		arg6 string
 	}{arg1, arg2, arg3, arg4, arg5, arg6})
+	stub := fake.UpdateCommitStatusStub
+	fakeReturns := fake.updateCommitStatusReturns
 	fake.recordInvocation("UpdateCommitStatus", []interface{}{arg1, arg2, arg3, arg4, arg5, arg6})
 	fake.updateCommitStatusMutex.Unlock()
-	if fake.UpdateCommitStatusStub != nil {
-		return fake.UpdateCommitStatusStub(arg1, arg2, arg3, arg4, arg5, arg6)
+	if stub != nil {
+		return stub(arg1, arg2, arg3, arg4, arg5, arg6)
 	}
 	if specificReturn {
 		return ret.result1
 	}
-	fakeReturns := fake.updateCommitStatusReturns
 	return fakeReturns.result1
 }
 
