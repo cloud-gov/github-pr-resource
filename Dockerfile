@@ -1,6 +1,6 @@
 ARG base_image
 
-FROM golang:1.22 as builder
+FROM golang:1.23 AS builder
 ADD . /go/src/github.com/cloud-gov/github-pr-resource
 WORKDIR /go/src/github.com/cloud-gov/github-pr-resource
 RUN curl -sL https://taskfile.dev/install.sh | sh
@@ -12,10 +12,10 @@ RUN apt update && apt upgrade -y -o Dpkg::Options::="--force-confdef"
 RUN apt install -y --no-install-recommends \
     git \
     git-lfs \
-    openssh-server \
     openssh-client \
     git-crypt \
     && chmod +x /opt/resource/*
+RUN wget curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
 COPY scripts/askpass.sh /usr/local/bin/askpass.sh
 
 FROM resource
