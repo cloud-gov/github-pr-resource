@@ -1,6 +1,6 @@
 ARG base_image
 
-FROM golang:1.24 AS builder
+FROM golang:1.25 AS builder
 ADD . /go/src/github.com/cloud-gov/github-pr-resource
 WORKDIR /go/src/github.com/cloud-gov/github-pr-resource
 RUN curl -sL https://taskfile.dev/install.sh | sh
